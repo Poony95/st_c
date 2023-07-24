@@ -21,6 +21,14 @@ public class DeptController {
 	@Autowired
 	private DeptDAO_MB dao_MB;
 	
+	@GetMapping("/dept/update/{dno}")
+	public String update(Model model, 
+			@PathVariable("dno") int dno) {
+		model.addAttribute("d", dao_MB.findByDno(dno));
+		return "/update/dept";
+	}
+	
+	
 	@GetMapping("/dept/insert")
 	public void insert() {		
 	}

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>부서수정</h2>
+	<hr />
+	<form action="/dept/update" method="post">
+		부서번호 : <input type="text" name="dno" th:value="${d.dno}"/><br />
+		부서이름 : <input type="text" name="dno" th:value="${d.dname}"/><br />
+		부서위치 : <input type="text" name="dno" th:value="${d.dloc}"/><br />
+		<input type="submit" value="수정"/>
+	</form>
+</body>
+</html>
